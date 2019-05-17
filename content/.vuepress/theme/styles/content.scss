@@ -1,0 +1,123 @@
+.main h1:first-of-type {
+  line-height: 1;
+}
+
+.content-body {
+  text-align: justify;
+
+  h1, h2, h3, h4, h5, h6 {
+    position: relative;
+    left: -0.8em;
+    padding-left: 0.8em;
+
+    .header-anchor {
+      position: absolute;
+      left: 0;
+      color: #ccc;
+      visibility: hidden;
+
+      &:hover {
+        color: $colorAccent;
+        text-decoration: none;
+      }
+    }
+
+    &:hover .header-anchor, &:target .header-anchor {
+      visibility: visible;
+    }
+  }
+
+  p, ul {
+    margin-bottom: 2rem;
+  }
+}
+
+.post-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+
+  .post-item--large {
+    grid-column: span 2;
+  }
+}
+
+.post-item {
+  display: block;
+  margin-bottom: 2rem;
+
+  .post-item-image {
+    margin: 0 0 1rem 0;
+
+    a {
+      display: block;
+    }
+  }
+
+  .post-meta {
+    font-size: 0.8rem;
+  }
+
+  .post-date {
+    margin-left: 1rem;
+  }
+
+  .post-excerpt {
+    margin-top: 20px;
+  }
+
+  .post-title {
+    margin-bottom: 0.5rem;
+
+    h2 {
+      line-height: 1;
+    }
+  }
+}
+
+.prev-next {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3rem;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid $borderColor;
+
+  @media only screen and (max-width: $sm) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 1rem;
+  }
+
+  .prev, .next {
+    a {
+      display: flex;
+      align-items: center;
+      color: $textColor;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+    }
+
+    img {
+      max-width: 100px;
+    }
+  }
+
+  .prev img {
+    margin-right: 2rem;
+  }
+
+  .next a {
+    justify-content: flex-end;
+
+    img {
+      margin-left: 2rem;
+    }
+  }
+}

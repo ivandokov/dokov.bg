@@ -1,0 +1,48 @@
+#app {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0 50px;
+
+  @media only screen and (max-width: $lg) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $sm) {
+    padding: 0 15px;
+  }
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 12fr 4fr;
+  grid-template-areas: "content sidebar";
+  grid-gap: 2rem;
+  margin-top: 50px;
+
+  @media only screen and (max-width: $md) {
+    grid-template-columns: 1fr;
+    grid-template-areas: "sidebar" "content";
+  }
+}
+
+.main {
+  grid-area: content;
+}
+
+.sidebar {
+}
+
+.content {
+  width: 100%;
+}
