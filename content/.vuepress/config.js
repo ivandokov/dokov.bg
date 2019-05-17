@@ -7,6 +7,9 @@ module.exports = {
             site_url: 'http://dokov.bg', // required
             copyright: 'Ivan Dokov', // optional
             count: 20 // How much articles
+        },
+        '@vuepress/google-analytics': {
+            ga: 'UA-29469126-4'
         }
     }
 };
