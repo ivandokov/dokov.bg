@@ -25,11 +25,11 @@
     border-radius: 1rem;
 
     @media only screen and (max-width: $lg) {
-      padding: 0.5rem;
+      padding: 0.3rem 0.5rem;
     }
 
     @media only screen and (max-width: $sm) {
-      padding: 0.2rem;
+      font-size: 0.8em;
     }
 
     &:not(.icon):hover, &:not(.logo).router-link-exact-active {
