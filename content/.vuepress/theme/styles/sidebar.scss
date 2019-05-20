@@ -14,7 +14,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid $colorAccent;
+  border: 1px solid $borderColor;
   width: 33px;
   max-width: 33px;
   min-width: 33px;
@@ -32,11 +32,11 @@
     height: 5px;
     margin-left: -2.5px;
     border-radius: 50%;
-    background-color: $colorAccent;
+    background-color: $borderColor;
   }
   &:before {
     top: 5px;
-    box-shadow: 0 8px 0 0px $colorAccent;
+    box-shadow: 0 8px 0 0px $borderColor;
   }
   &:after {
     bottom: 5px;
@@ -59,6 +59,7 @@
     border-radius: 3px;
     font-size: 1rem;
     line-height: normal;
+    outline: none;
 
     &::placeholder {
       font-style: italic;
@@ -70,10 +71,9 @@
 
 .suggestions {
   width: 100%;
-  margin: 0 0 10px 0;
+  margin: 0;
   padding: 10px 0;
   list-style: none;
-  border-bottom: 1px solid #e8e5e5;
 }
 
 .suggestion, .nav-item {

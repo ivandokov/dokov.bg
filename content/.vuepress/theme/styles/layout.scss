@@ -10,6 +10,7 @@
 }
 
 .container {
+  position: relative;
   width: 1000px;
   margin: 0 auto;
   padding: 0 50px;
@@ -24,11 +25,17 @@
 }
 
 .content-grid {
-  display: grid;
-  grid-template-columns: 12fr 4fr;
-  grid-template-areas: "content sidebar";
-  grid-gap: 2rem;
-  margin-top: 50px;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 120px;
+
+  @media only screen and (max-width: $xl) {
+    width: auto;
+    display: grid;
+    grid-template-columns: 10fr 4fr;
+    grid-template-areas: "content sidebar";
+    grid-gap: 2rem;
+  }
 
   @media only screen and (max-width: $md) {
     grid-template-columns: 1fr;
@@ -41,6 +48,33 @@
 }
 
 .sidebar {
+  grid-area: sidebar;
+  position: fixed;
+  top: 80px;
+  right: 0;
+  min-width: 300px;
+  height: calc(100% - 80px);
+  padding: 40px 30px;
+  border-left: 1px solid #f5f5f5;
+  overflow: auto;
+  background: #fff;
+
+  @media only screen and (max-width: $xl) {
+    min-width: 200px;
+  }
+
+  @media only screen and (max-width: $lg) {
+    position: relative;
+    padding: 40px 0 40px 40px;
+    top: -40px;
+  }
+
+  @media only screen and (max-width: $md) {
+    position: static;
+    height: auto;
+    padding: 0;
+    border: none;
+  }
 }
 
 .content {
