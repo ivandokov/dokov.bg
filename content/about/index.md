@@ -2,11 +2,11 @@
 type: page
 ---
 
+::: center
 <h1>I am Ivan Dokov</h1>
 
-Web developer since 2006. 
+Web developer since 2006.
 
-::: center-50
 ![Ivan Dokov](./IvanDokov.png "Ivan Dokov")
 :::
 

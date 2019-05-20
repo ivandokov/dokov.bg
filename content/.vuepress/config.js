@@ -12,6 +12,11 @@ module.exports = {
             ga: 'UA-29469126-4'
         }],
         ['container', {
+            type: 'center',
+            before: `<div class="center">`,
+            after: `</div>`,
+        }],
+        ['container', {
             type: 'center-50',
             before: `<div class="center-50">`,
             after: `</div>`,
