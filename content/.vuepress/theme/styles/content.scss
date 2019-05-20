@@ -11,6 +11,7 @@
     padding-left: 0.8em;
     margin-top: -6rem;
     padding-top: 6rem;
+    text-align: left;
 
     .header-anchor {
       position: absolute;
@@ -26,6 +27,18 @@
 
     &:hover .header-anchor, &:target .header-anchor {
       visibility: visible;
+    }
+
+    @media only screen and (max-width: $lg) {
+      left: 0;
+      padding-left: 0;
+
+      .header-anchor {
+        position: relative;
+        visibility: visible;
+        color: $colorAccent;
+        text-decoration: none;
+      }
     }
   }
 

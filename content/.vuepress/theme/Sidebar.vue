@@ -53,7 +53,7 @@
 
         methods: {
             handleResize() {
-                this.smallScreen = window.innerWidth < 800;
+                this.smallScreen = window.innerWidth < 1100;
                 this.showNav = !this.smallScreen;
             }
         }

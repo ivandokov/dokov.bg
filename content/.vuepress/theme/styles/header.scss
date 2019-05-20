@@ -24,6 +24,14 @@
     color: $textColor;
     border-radius: 1rem;
 
+    @media only screen and (max-width: $lg) {
+      padding: 0.5rem;
+    }
+
+    @media only screen and (max-width: $sm) {
+      padding: 0.2rem;
+    }
+
     &:not(.icon):hover, &:not(.logo).router-link-exact-active {
       text-decoration: none;
       background-color: $colorAccent;
