@@ -49,7 +49,7 @@ Now I work for myself at [JetSpark](http://jetspark.io).
 
 I am passionate about mutiple activities in my life but the top place is taken by my spearfishing hobby.
 
-### Spearfishing
+### Spearfishing :fish:
 
 I may have to present my spearfishing activities not only as hobby as I am competing prefessionally since 2016 and I first held a speargun underwater when I was just 8 years old.
 
