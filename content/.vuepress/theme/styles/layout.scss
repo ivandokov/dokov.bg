@@ -47,12 +47,12 @@
 .sidebar {
   grid-area: sidebar;
   position: fixed;
-  top: 80px;
+  top: $headerHeight;
   right: 0;
   width: 300px;
-  height: calc(100% - 80px);
+  height: calc(100% - #{$headerHeight});
   padding: 40px 30px;
-  border-left: 1px solid #f5f5f5;
+  border-left: 1px solid $borderColor2;
   overflow: auto;
   background: #fff;
 

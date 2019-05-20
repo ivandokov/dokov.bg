@@ -74,7 +74,7 @@ hr {
   &:before {
     content: "";
     display: block;
-    height: 100px;
-    margin-top: -100px;
+    height: $headerHeight + 20px;
+    margin-top: -$headerHeight - 20px;
   }
 }
