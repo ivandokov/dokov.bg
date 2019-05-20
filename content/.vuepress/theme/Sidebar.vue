@@ -13,9 +13,11 @@
                 </router-link>
             </div>
             <div class="nav-item" v-for="category in categories" :key="category.page.path">
-                <router-link :to="category.page.path">
-                    <span>{{ category.page.title }}</span>
-                    <span class="item-count">{{ category.pages.length }}</span>
+                <router-link
+                        :class="{'router-link-exact-active': isActive(category.page.path)}"
+                        :to="category.page.path">
+                            <span>{{ category.page.title }}</span>
+                            <span class="item-count">{{ category.pages.length }}</span>
                 </router-link>
             </div>
         </nav>
@@ -55,6 +57,10 @@
             handleResize() {
                 this.smallScreen = window.innerWidth < 1100;
                 this.showNav = !this.smallScreen;
+            },
+
+            isActive(path) {
+                return this.$page.path.match(new RegExp(`^${path}.*`));
             }
         }
     }
