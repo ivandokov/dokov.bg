@@ -34,6 +34,8 @@
 </template>
 
 <script>
+    import { SortedPosts } from '../posts';
+
     export default {
         data() {
             return {
@@ -59,7 +61,8 @@
                     return;
                 }
 
-                const {pages, themeConfig} = this.$site;
+                const {themeConfig} = this.$site;
+                const posts = SortedPosts(this.$site.pages);
                 const max = themeConfig.searchMaxSuggestions || 5;
                 const localePath = this.$localePath;
                 const matches = item => (
@@ -67,9 +70,9 @@
                     item.title.toLowerCase().indexOf(query) > -1
                 );
                 const res = [];
-                for (let i = 0; i < pages.length; i++) {
+                for (let i = 0; i < posts.length; i++) {
                     if (res.length >= max) break;
-                    const p = pages[i];
+                    const p = posts[i];
                     // filter out results that do not match current locale
                     if (this.getPageLocalePath(p) !== localePath) {
                         continue;
