@@ -30,6 +30,34 @@
   p, ul {
     margin-bottom: 2rem;
   }
+
+  .center-50 {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+
+    a {
+      display: block;
+    }
+  }
+
+  .image {
+    margin-left: -3rem;
+    margin-right: -3rem;
+
+    a {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $sm) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 }
 
 .post-items {

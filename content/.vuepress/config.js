@@ -9,7 +9,17 @@ module.exports = {
             count: 20
         }],
         ['@vuepress/plugin-google-analytics', {
-            'ga': 'UA-29469126-4'
-        }]
+            ga: 'UA-29469126-4'
+        }],
+        ['container', {
+            type: 'center-50',
+            before: `<div class="center-50">`,
+            after: `</div>`,
+        }],
+        ['container', {
+            type: 'image',
+            before: `<div class="image">`,
+            after: `</div>`,
+        }],
     ]
 };

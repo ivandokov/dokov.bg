@@ -6,12 +6,16 @@ type: page
 
 Web developer since 2006. 
 
+::: center-50
 ![Ivan Dokov](./IvanDokov.png "Ivan Dokov")
+:::
 
 I love writing code, playing with Linux servers and trying the newest technologies.<br>
 My passion to web development made my favourite hobby a full time job. I've been a team leader in several companies and now I lead my own web development company called
 
-<a href="http://jetspark.io" target="_blank"  style="display:block; width:50%; margin:0 auto">![JetSpark](./jetspark.svg "JetSpark")</a>
+::: center-50
+<a href="http://jetspark.io" target="_blank">![JetSpark](./jetspark.svg "JetSpark")</a>
+:::
 
 ---
 
