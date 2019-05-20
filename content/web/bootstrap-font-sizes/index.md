@@ -17,6 +17,15 @@ It is useful for designs where the font size of a text is not linearly scaled an
 
 By default the SCSS generates font-size classes based on your `$grid-breakpoints` map. If you modify the required breakpoints for your project the change will be applied accordingly for font-size classes too.
 
+## Installation
+
+```bash
+npm i -D bootstrap-font-sizes
+```
+```bash
+yarn add -D bootstrap-font-sizes
+```
+
 ## Options
 #### `$max-font-size`
 By default the code is generating classes from 100 to 0 with `font-size: 100px` to `font-size: 0px` values for each breakpoint. It is rare case that you will need all these classes generated. To change the maximum limit of the generated font sizes you can use the variable `$max-font-size`. Changing the value will generate font-size classes from the specified value to 0 by default or the specified minimum by `$min-font-size`.
