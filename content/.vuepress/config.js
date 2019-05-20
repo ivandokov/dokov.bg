@@ -22,6 +22,11 @@ module.exports = {
             after: `</div>`,
         }],
         ['container', {
+            type: 'center-80',
+            before: `<div class="center-80">`,
+            after: `</div>`,
+        }],
+        ['container', {
             type: 'image',
             before: `<div class="image">`,
             after: `</div>`,

@@ -5,7 +5,7 @@
                 <img v-if="large && post.frontmatter.image" :src="$withBase(post.frontmatter.image)" :alt="post.title"/>
                 <img v-else-if="post.frontmatter.thumbnail" :src="$withBase(post.frontmatter.thumbnail)" :alt="post.title"/>
             </router-link>
-            <div v-else>
+            <div class="image" v-else>
                 <img v-if="large && post.frontmatter.image" :src="$withBase(post.frontmatter.image)" :alt="post.title"/>
                 <img v-else-if="post.frontmatter.thumbnail" :src="$withBase(post.frontmatter.thumbnail)" :alt="post.title"/>
             </div>

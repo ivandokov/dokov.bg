@@ -63,6 +63,11 @@
   .post-item-image {
     margin: 0 0 1rem 0;
 
+    .image {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
     a {
       display: block;
     }
@@ -143,24 +148,36 @@
     padding-left: 0;
     text-align: center;
   }
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+.center-80, .center-50, .image {
+  a {
+    display: block;
+  }
+}
+
+.center-80 {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .center-50 {
   display: block;
   width: 50%;
   margin: 0 auto;
-
-  a {
-    display: block;
-  }
 }
 
 .image {
-  margin-left: -3rem;
-  margin-right: -3rem;
+  margin: 4rem -4rem;
 
-  a {
-    display: block;
+  @media only screen and (max-width: $lg) {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   img {
