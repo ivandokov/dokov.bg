@@ -1,7 +1,7 @@
 ---
 type: post
 title: Depy - Simple and nearly dependency free deployment tool
-date: May 21, 2019
+date: September 3, 2019
 thumbnail: /depy/depy-thumbnail.jpg
 image: /depy/depy.jpg
 excerpt: Depy - Simple and nearly dependency free deployment tool
