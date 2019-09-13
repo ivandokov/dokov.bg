@@ -1,6 +1,6 @@
 module.exports = {
-    title: 'Ivan Dokov - Web Developer',
-    description: 'Web development focused blog.',
+    title: 'Ivan Dokov - Web Expert',
+    description: 'Blog for web related stuff.',
     plugins: [
         ['vuepress-plugin-rss', {
             base_url: '/',
