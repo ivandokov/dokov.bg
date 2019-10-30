@@ -4,13 +4,9 @@ set -e
 
 rm -rf docs
 
-cd content
-
 npm run build
 
-mv .vuepress/dist ../docs
-
-cd -
+mv src/.vuepress/dist docs
 
 echo 'dokov.bg' > docs/CNAME
 

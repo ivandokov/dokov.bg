@@ -1,2 +1,2 @@
-content/node_modules
-content/.vuepress/dist
+node_modules
+src/.vuepress/dist
