@@ -2,23 +2,24 @@
     <div class="content-grid">
         <Sidebar></Sidebar>
         <main class="main">
-            <PostPreview :post="$page" :large="true" :link="false" :excerpt="false" :title="false"/>
-
             <div class="content-body">
                 <Content :custom="false"/>
             </div>
 
+            <div class="post-meta">
+                <span class="post-category">In <router-link :to="category.path">{{ category.title }}</router-link></span>
+                <span class="post-date">{{ $page.frontmatter.date }}</span>
+            </div>
+
             <div class="prev-next" v-if="prev || next">
-                <div class="prev">
-                  <router-link v-if="prev" class="prev" :to="prev.path">
-                      <img v-if="prev.frontmatter.thumbnail" :src="$withBase(prev.frontmatter.thumbnail)" :alt="prev.title">
-                      <h4>{{ prev.title }}</h4>
+                <div v-if="prev" class="prev">
+                  <router-link class="prev" :to="prev.path">
+                      <strong>{{ prev.title }}</strong>
                   </router-link>
                 </div>
-                <div class="next">
-                  <router-link v-if="next" :to="next.path">
-                      <h4>{{ next.title }}</h4>
-                      <img v-if="next.frontmatter.thumbnail" :src="$withBase(next.frontmatter.thumbnail)" :alt="next.frontmatter.title">
+                <div v-if="next" class="next">
+                  <router-link :to="next.path">
+                      <strong>{{ next.title }}</strong>
                   </router-link>
                 </div>
             </div>
@@ -28,12 +29,15 @@
 
 <script>
     import Sidebar from '../theme/Sidebar'
-    import PostPreview from './PostPreview';
-    import { FindByPath, FindByOffset } from '../posts';
+    import { FindByPath, FindByOffset, GetCategory } from '../posts';
 
     export default {
-        components: { PostPreview, Sidebar },
+        components: { Sidebar },
         computed: {
+            category() {
+                return GetCategory(this.$page);
+            },
+
             prev() {
                 const prev = this.$page.frontmatter.prev;
                 if (prev === false) {

@@ -12,6 +12,8 @@ meta:
 
 # MySQL Dump Databases
 
+![MySQL Dump Databases](./mysqldumpdbs.jpg)
+
 Sometimes you may need to export all databases from a MySQL server but each database to be in a separate file.
 You can easily do this with a few lines of code but why should you remember how to do it every time?
 Well since I do not want to remember it I created a small script called [mysqldumpdbs](https://github.com/ivandokov/mysqldumpdbs) that does that. Dump all MySQL databases from a server in separate files.

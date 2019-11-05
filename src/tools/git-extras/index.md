@@ -12,6 +12,8 @@ meta:
 
 # Git Extras
 
+![Git Large Files](./git-large-file.jpg)
+
 It is not a rare case to unintentionally add large files to the git history. A misconfigured `.gitignore` file or a team member relying on global `.gitignore` assuming everyone in the team has the same ignore rules... It could happen. And what we do once it happens? We need a way to find large files in our repository. I made a collection of scripts that I found online and use in such cases. I called it [Git Extras](https://github.com/ivandokov/git-extras). 
 
 ## Git Large Files

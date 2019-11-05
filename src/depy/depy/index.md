@@ -11,7 +11,11 @@ meta:
 ---
 
 # Depy
-### Simple and nearly dependency free deployment tool.  
+
+### Simple and nearly dependency free deployment tool. 
+
+![Depy](./depy.jpg)
+
 Written in `bash` the tool does not have any major dependencies. Everything you need to have installed locally is:
  * `git` (*download Depy and for updates*)
  * `ssh` (*communicate with the server*)

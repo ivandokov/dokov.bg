@@ -25,18 +25,16 @@
 }
 
 .content-grid {
-  width: 80%;
   margin: 0 auto;
   padding-top: 120px;
 
   @media only screen and (max-width: $xxl) {
-    width: 70%;
-    margin-left: 0;
+    margin-right: 180px;
   }
 
   @media only screen and (max-width: $lg) {
-    width: 100%;
     margin-left: auto;
+    margin-right: auto;
   }
 }
 

@@ -6,6 +6,7 @@
   text-align: justify;
   font-size: 1.2rem;
   line-height: 1.8;
+  margin-bottom: 50px;
 
   h1, h2, h3, h4, h5, h6 {
     position: relative;
@@ -48,14 +49,7 @@
 }
 
 .post-items {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
 
-  .post-item--large {
-    grid-column: span 2;
-  }
 }
 
 .post-item {
@@ -84,7 +78,7 @@
   }
 
   .post-excerpt {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   .post-title {
@@ -111,33 +105,15 @@
 
   .prev, .next {
     a {
-      display: flex;
-      align-items: center;
       color: $textColor;
-
-      &:hover {
-        text-decoration: none;
-      }
-
-      h4 {
-        margin-bottom: 0;
-      }
-    }
-
-    img {
-      max-width: 100px;
     }
   }
 
-  .prev img {
-    margin-right: 2rem;
-  }
-
-  .next a {
+  .next {
     text-align: right;
 
-    img {
-      margin-left: 2rem;
+    @media only screen and (max-width: $sm) {
+        text-align: left;
     }
   }
 }
