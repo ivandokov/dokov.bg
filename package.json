@@ -5,12 +5,13 @@
     "build": "vuepress build src"
   },
   "dependencies": {
-    "@vuepress/plugin-google-analytics": "^1.0.0-alpha.48",
+    "@vuepress/plugin-google-analytics": "^1.2.0",
     "moment": "^2.24.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.0",
     "normalize.css": "^8.0.1",
     "sass-loader": "^7.1.0",
-    "vuepress-plugin-container": "^2.0.1",
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-container": "^2.1.0",
     "vuepress-plugin-rss": "^2.0.0"
   }
 }
