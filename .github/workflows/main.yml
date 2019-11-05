@@ -16,7 +16,6 @@ jobs:
 
       - name: Run a build
         run: |
-          npm install -g vuepress
           npm install
           npm run build
           rm -rf docs
