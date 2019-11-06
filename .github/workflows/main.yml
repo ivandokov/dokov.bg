@@ -22,16 +22,15 @@ jobs:
       - name: Setup docs
         run: |
           rm -rf docs
-          ls -l src/.vuepress/dist/assets
           mv src/.vuepress/dist docs
-          ls -l docs/assets
           echo 'dokov.bg' > docs/CNAME
 
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -m "Build" -a
+          git add docs
+          git commit -m "Build"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
