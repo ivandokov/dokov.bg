@@ -2,8 +2,6 @@
 type: post
 title: Bootstrap 4 Font Sizes
 date: May 20, 2019
-thumbnail: /bootstrap-font-sizes/bootstrap-font-sizes-thumbnail.jpg
-image: /bootstrap-font-sizes/bootstrap-font-sizes.jpg
 excerpt: Bootstrap 4 Font Sizes SCSS Mixin
 meta:
   - name: description

@@ -2,8 +2,6 @@
 type: post
 title: MySQL Dump Databases
 date: May 17, 2019
-thumbnail: /mysqldumpdbs/mysqldumpdbs-thumbnail.jpg
-image: /mysqldumpdbs/mysqldumpdbs.jpg
 excerpt: Dump all MySQL databases from a server in separate files.
 meta:
   - name: description

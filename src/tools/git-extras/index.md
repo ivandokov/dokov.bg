@@ -2,8 +2,6 @@
 type: post
 title: Git Large Files and Git Remove History
 date: May 16, 2019
-thumbnail: /git-extras/git-large-file-thumbnail.jpg
-image: /git-extras/git-large-file.jpg
 excerpt: Tools to find large files in git and delete them from the history.
 meta:
   - name: description
