@@ -12,13 +12,13 @@
             </div>
 
             <div class="prev-next" v-if="prev || next">
-                <div v-if="prev" class="prev">
-                  <router-link class="prev" :to="prev.path">
+                <div class="prev">
+                  <router-link v-if="prev" class="prev" :to="prev.path">
                       <strong>{{ prev.title }}</strong>
                   </router-link>
                 </div>
-                <div v-if="next" class="next">
-                  <router-link :to="next.path">
+                <div class="next">
+                  <router-link v-if="next" :to="next.path">
                       <strong>{{ next.title }}</strong>
                   </router-link>
                 </div>
