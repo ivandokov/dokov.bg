@@ -25,14 +25,14 @@ jobs:
           mv src/.vuepress/dist docs
           echo 'dokov.bg' > docs/CNAME
 
-      - name: Commit files
+      - name: Commit new build
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add docs
           git commit -m "Build"
 
-      - name: Push changes
+      - name: Deploy new version
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
