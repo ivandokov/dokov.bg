@@ -36,5 +36,4 @@
     }
 </script>
 
-<style src="normalize.css/normalize.css"></style>
 <style src="./styles/main.scss" lang="scss"></style>

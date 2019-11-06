@@ -35,6 +35,4 @@
     }
 </script>
 
-<style src="prismjs/themes/prism-tomorrow.css"></style>
-<style src="normalize.css/normalize.css"></style>
 <style src="./styles/main.scss" lang="scss"></style>

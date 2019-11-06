@@ -2,7 +2,7 @@
     <div class="content-grid">
         <main class="main">
             <div class="content-body">
-                <Content :custom="false"/>
+                <Content/>
             </div>
         </main>
     </div>
