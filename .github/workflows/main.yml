@@ -22,7 +22,9 @@ jobs:
       - name: Setup docs
         run: |
           rm -rf docs
+          ls -l src/.vuepress/dist/assets
           mv src/.vuepress/dist docs
+          ls -l docs/assets
           echo 'dokov.bg' > docs/CNAME
 
       - name: Commit files
