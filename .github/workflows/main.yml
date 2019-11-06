@@ -14,10 +14,13 @@ jobs:
         with:
           node-version: '10.x'
 
-      - name: Run a build
+      - name: Run build
         run: |
           npm install
           npm run build
+
+      - name: Setup docs
+        run: |
           rm -rf docs
           mv src/.vuepress/dist docs
           echo 'dokov.bg' > docs/CNAME
