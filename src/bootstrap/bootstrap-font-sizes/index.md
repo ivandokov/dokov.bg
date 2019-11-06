@@ -2,17 +2,17 @@
 type: post
 title: Bootstrap 4 Font Sizes
 date: May 20, 2019
-excerpt: Bootstrap 4 Font Sizes SCSS Mixin
+excerpt: Bootstrap 4.* font sizes SCSS mixin for generating font classes with responsive breakpoints.
 meta:
   - name: description
-    content: Bootstrap 4 Font Sizes SCSS Mixin
+    content: Bootstrap 4.* font sizes SCSS mixin for generating font classes with responsive breakpoints
 ---
 
 # Bootstrap 4 Font Sizes
 
 ![Bootstrap 4 Font Sizes](./bootstrap-font-sizes.jpg)
 
-I wrote a small package that generates `font-size` classes for defined pixels for all breakpoints in **Bootstrap 4**.
+I wrote a small package that generates `font-size` classes for defined pixels for all breakpoints in **Bootstrap 4.***.
 It is useful for designs where the font size of a text is not linearly scaled and using REM is not helping. For example if you are using REM for spacing (`.p/.m` classes) and for font sizes the texts are unreadable on smaller resolutions when you scale down the base font size. By using for example `font-size-20 font-size-md-16` classes you can fix this issue.
 
 By default the SCSS generates font-size classes based on your `$grid-breakpoints` map. If you modify the required breakpoints for your project the change will be applied accordingly for font-size classes too.

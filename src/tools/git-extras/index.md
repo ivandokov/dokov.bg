@@ -5,7 +5,7 @@ date: May 16, 2019
 excerpt: Tools to find large files in git and delete them from the history.
 meta:
   - name: description
-    content: Tools to find large files in git and delete them from the history.
+    content: Tools to find large files in git and delete them from the history
 ---
 
 # Git Extras

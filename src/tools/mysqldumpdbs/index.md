@@ -5,7 +5,7 @@ date: May 17, 2019
 excerpt: Dump all MySQL databases from a server in separate files.
 meta:
   - name: description
-    content: Dump all MySQL databases from a server in separate files.
+    content: Dump all MySQL databases from a server in separate files
 ---
 
 # MySQL Dump Databases

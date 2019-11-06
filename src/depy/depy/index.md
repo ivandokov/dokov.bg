@@ -2,10 +2,10 @@
 type: post
 title: Depy - Simple and nearly dependency free deployment tool
 date: September 3, 2019
-excerpt: Depy - Simple and nearly dependency free deployment tool
+excerpt: Bash based deployment tool for zero downtime website deployment and instant rollbacks in case of emergency.
 meta:
   - name: description
-    content: Depy - Simple and nearly dependency free deployment tool
+    content: Bash based deployment tool for zero downtime website deployment and instant rollbacks in case of emergency
 ---
 
 # Depy
