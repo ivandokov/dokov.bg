@@ -1,6 +1,6 @@
 ---
 type: post
-title: Installing nginx GeoIP2 on Ubuntu
+title: Installing Nginx with GeoIP2 on Ubuntu
 date: November 6, 2019
 excerpt: Build nginx from source with GeoIP2 module and block specific countries to access a website or make country-specific domain redirects.
 meta:
