@@ -1,22 +1,14 @@
 <template>
-    <div class="wrapper">
-        <Header></Header>
-        <div class="container">
-            <div class="content-grid">
-                <Sidebar></Sidebar>
-                <main class="main">
-                    <div class="content">
-                        <h1>{{ getMsg() }}</h1>
-                    </div>
-                </main>
-            </div>
-        </div>
+    <div class="container">
+        <Sidebar></Sidebar>
+        <main class="main">
+            <h1>{{ getMsg() }}</h1>
+        </main>
     </div>
 </template>
 
 <script>
-    import Header from './Header.vue'
-    import Sidebar from './Sidebar.vue'
+    import Sidebar from './components/Sidebar.vue'
 
     const msgs = [
         `There's nothing here.`,
@@ -26,7 +18,7 @@
     ];
 
     export default {
-        components: { Header, Sidebar },
+        components: { Sidebar },
 
         methods: {
             getMsg() {
@@ -36,4 +28,4 @@
     }
 </script>
 
-<style src="./styles/main.scss" lang="scss"></style>
+<style src="./styles/app.css"></style>

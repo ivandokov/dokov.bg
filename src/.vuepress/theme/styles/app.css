@@ -1,0 +1,7 @@
+@import "tailwindcss/base";
+@import "./content";
+
+@import "tailwindcss/components";
+@import "prismjs/themes/prism-tomorrow";
+
+@import "tailwindcss/utilities";

@@ -1,38 +1,30 @@
 <template>
-    <div class="content-grid">
-        <Sidebar></Sidebar>
-        <main class="main">
-            <div class="content-body">
-                <Content/>
-            </div>
+    <article>
+        <Content class="content-body -mt-2"/>
 
-            <div class="post-meta">
-                <span class="post-category">In <router-link :to="category.path">{{ category.title }}</router-link></span>
-                <span class="post-date">{{ $page.frontmatter.date }}</span>
-            </div>
+        <aside class="border border-l-0 border-r-0 border-gray-300 my-12 py-10 text-xs text-gray-500">
+            In <router-link :to="category.path" class="text-primary hover:underline">{{ category.title }}</router-link> {{ $page.frontmatter.date }}
+        </aside>
 
-            <div class="prev-next" v-if="prev || next">
-                <div class="prev">
-                  <router-link v-if="prev" class="prev" :to="prev.path">
-                      <strong>{{ prev.title }}</strong>
-                  </router-link>
-                </div>
-                <div class="next">
-                  <router-link v-if="next" :to="next.path">
-                      <strong>{{ next.title }}</strong>
-                  </router-link>
-                </div>
+        <aside class="flex leading-tight" v-if="prev || next">
+            <div class="w-1/2 pr-2">
+              <router-link v-if="prev" class="prev" :to="prev.path">
+                  <strong>{{ prev.title }}</strong>
+              </router-link>
             </div>
-        </main>
-    </div>
+            <div class="w-1/2 pl-2 text-right">
+              <router-link v-if="next" :to="next.path">
+                  <strong>{{ next.title }}</strong>
+              </router-link>
+            </div>
+        </aside>
+    </article>
 </template>
 
 <script>
-    import Sidebar from '../theme/Sidebar'
     import { FindByPath, FindByOffset, GetCategory } from '../posts';
 
     export default {
-        components: { Sidebar },
         computed: {
             category() {
                 return GetCategory(this.$page);

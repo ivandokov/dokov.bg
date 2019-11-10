@@ -1,0 +1,169 @@
+html {
+    @apply antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.content-body {
+    h1, h2, h3, h4, h5, h6 {
+        left: -.6em;
+        padding-left: .6em;
+        @apply relative mt-0 mb-4 leading-tight font-bold;
+
+        .header-anchor {
+            @apply text-gray-500 visible;
+
+            &:hover {
+                @apply text-primary no-underline;
+            }
+        }
+
+        @screen md {
+            .header-anchor {
+                @apply absolute left-0 invisible;
+            }
+
+            &:hover .header-anchor, &:target .header-anchor {
+                @apply visible;
+            }
+        }
+    }
+
+    a {
+        @apply text-primary no-underline;
+
+        &:hover {
+            @apply underline;
+        }
+    }
+
+    p, code[class*="language-"], pre[class*="language-"], ul, ol, blockquote {
+        @apply mb-8;
+    }
+
+    pre[class*="language-"], code {
+        @apply text-base;
+    }
+
+    pre[class*="language-"] code {
+        @apply text-base text-gray-300;
+    }
+
+    code {
+        @apply text-sm bg-gray-200 text-gray-700 px-2 py-1 rounded;
+    }
+
+    img {
+        @apply block max-w-full;
+    }
+
+    .text-center img {
+        @apply mx-auto;
+    }
+
+    hr {
+        height: 1px;
+        @apply my-12 mx-0 bg-gray-300 border-0;
+    }
+
+    ul, ol {
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+    }
+
+    ul {
+        @apply list-disc;
+    }
+
+    ol {
+        @apply list-decimal;
+    }
+
+    h1 {
+        @apply text-4xl;
+
+        @screen md {
+            @apply text-5xl;
+        }
+    }
+    h2 {
+        @apply text-2xl;
+
+        @screen md {
+            @apply text-3xl;
+        }
+    }
+    h3 {
+        @apply text-xl;
+
+        @screen md {
+            @apply text-2xl;
+        }
+    }
+    h4 {
+        @apply text-lg;
+
+        @screen md {
+            @apply text-xl;
+        }
+    }
+    h5 {
+        @apply text-sm;
+    }
+    h6 {
+        @apply text-xs;
+    }
+
+    div[class*="language-"] {
+        @apply relative;
+
+        pre {
+            @apply rounded;
+        }
+
+        code {
+            @apply bg-transparent p-0;
+        }
+
+        &::before {
+             @apply absolute z-10 text-xs text-gray-600;
+             top: 0.5em;
+             right: 1em;
+         }
+    }
+
+    div[class~="language-js"]:before { content: 'js'; }
+    div[class~="language-ts"]:before { content: 'ts'; }
+    div[class~="language-html"]:before { content: 'html'; }
+    div[class~="language-md"]:before { content: 'md'; }
+    div[class~="language-css"]:before { content: 'css'; }
+    div[class~="language-scss"]:before { content: 'scss'; }
+    div[class~="language-php"]:before { content: 'php'; }
+    div[class~="language-bash"]:before { content: 'bash'; }
+    div[class~="language-sh"]:before { content: 'sh'; }
+    div[class~="language-json"]:before { content: 'json'; }
+    div[class~="language-yaml"]:before { content: 'yaml'; }
+    div[class~="language-go"]:before { content: 'go'; }
+    div[class~="language-py"]:before { content: 'py'; }
+    div[class~="language-dart"]:before { content: 'dart'; }
+
+    .icon {
+        @apply text-gray-500 inline-block align-middle relative;
+        top: -1px;
+    }
+}
+
+:target {
+    @apply relative;
+    z-index: -1;
+
+    &:before {
+         content: "";
+         display: block;
+         height: 7rem;
+         margin-top: -7rem;
+     }
+}

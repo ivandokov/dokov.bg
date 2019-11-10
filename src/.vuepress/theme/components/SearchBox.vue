@@ -1,32 +1,34 @@
 <template>
-    <div class="search-box" :class="{ 'has-suggestions': showSuggestions }">
+    <div class="leading-tight" :class="{ 'has-suggestions': showSuggestions }">
         <input
                 @input="query = $event.target.value"
                 aria-label="Search"
                 :value="query"
                 :class="{ 'focused': focused }"
+                class="w-full mb-2 px-2 py-1 text-xs text-center md:text-right outline-none border-b border-transparent focus:border-gray-100 text-secondary placeholder-gray-500 hover:placeholder-primary"
                 autocomplete="off"
                 spellcheck="false"
-                placeholder="Search ..."
+                placeholder="Search"
                 @focus="focused = true"
                 @blur="focused = false"
+                @keyup.esc="query = ''"
                 @keyup.enter="go(focusIndex)"
                 @keyup.up="onUp"
                 @keyup.down="onDown">
         <ul
-                class="suggestions"
                 v-if="showSuggestions"
-                :class="{ 'align-right': alignRight }"
                 @mouseleave="unfocus">
             <li
-                    class="suggestion"
+                    class="mb-2"
                     v-for="(s, i) in suggestions"
-                    :class="{ focused: i === focusIndex }"
+                    :class="{ 'text-primary': i === focusIndex }"
                     @mousedown="go(i)"
                     @mouseenter="focus(i)">
                 <a :href="s.path" @click.prevent>
-                    <span class="suggestion-title">{{ s.title || s.path }}</span>
-                    <span v-if="s.header" class="suggestion-header">{{ s.header.title }}</span>
+                    <span class="block font-bold text-sm">{{ s.title || s.path }}</span>
+                    <span class="block text-gray-500 text-xs"
+                          :class="{ 'text-primary': i === focusIndex }"
+                          v-if="s.header">{{ s.header.title }}</span>
                 </a>
             </li>
         </ul>
@@ -47,7 +49,6 @@
 
         computed: {
             showSuggestions() {
-                return true;
                 return (
                     this.focused &&
                     this.suggestions &&
@@ -61,10 +62,8 @@
                     return;
                 }
 
-                const {themeConfig} = this.$site;
                 const posts = SortedPosts(this.$site.pages);
-                const max = themeConfig.searchMaxSuggestions || 5;
-                const localePath = this.$localePath;
+                const max = 5;
                 const matches = item => (
                     item.title &&
                     item.title.toLowerCase().indexOf(query) > -1
@@ -73,10 +72,6 @@
                 for (let i = 0; i < posts.length; i++) {
                     if (res.length >= max) break;
                     const p = posts[i];
-                    // filter out results that do not match current locale
-                    if (this.getPageLocalePath(p) !== localePath) {
-                        continue;
-                    }
                     if (matches(p)) {
                         res.push(p);
                     } else if (p.headers) {
@@ -94,25 +89,9 @@
                 }
                 return res;
             },
-
-            // make suggestions align right when there are not enough items
-            alignRight() {
-                const navCount = (this.$site.themeConfig.nav || []).length;
-                const repo = this.$site.repo ? 1 : 0;
-                return navCount + repo <= 2;
-            }
         },
 
         methods: {
-            getPageLocalePath(page) {
-                for (const localePath in this.$site.locales || {}) {
-                    if (localePath !== '/' && page.path.indexOf(localePath) === 0) {
-                        return localePath;
-                    }
-                }
-                return '/';
-            },
-
             onUp() {
                 if (this.showSuggestions) {
                     if (this.focusIndex > 0) {
@@ -134,7 +113,7 @@
             },
 
             go(i) {
-                if (!this.showSuggestions) {
+                if (!this.showSuggestions || i === -1) {
                     return;
                 }
                 this.$router.push(this.suggestions[i].path);
