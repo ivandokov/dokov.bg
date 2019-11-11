@@ -15,7 +15,10 @@ module.exports = {
             require('postcss-nested'),
             ...production ? [require('autoprefixer')] : [],
             ...production ? [require('@fullhuman/postcss-purgecss')({
-                content: ['./src/.vuepress/theme/**/*.vue'],
+                content: [
+                    './src/.vuepress/theme/**/*.vue',
+                    'node_modules/prismjs/themes/prism-tomorrow.css'
+                ],
                 whitelist: ['html', 'body'],
                 whitelistPatterns: [/^language-/, /^pre/, /^code/, /^token/],
                 whitelistPatternsChildren: [/content-body/],
