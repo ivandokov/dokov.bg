@@ -17,8 +17,8 @@
                                      :to="'/about/'">About</router-link>
                     </div>
                     <div class="inline md:block ml-2 md:ml-0 text-xs text-gray-500">
-                        <a class="p-1 hover:text-primary hover:underline" href="https://github.com/ivandokov" target="_blank">GitHub</a>
-                        <a class="p-1 hover:text-primary hover:underline" href="https://twitter.com/ivandokov" target="_blank">Twitter</a>
+                        <a class="p-1 hover:text-primary hover:underline" href="https://github.com/ivandokov" target="_blank" rel="me">GitHub</a>
+                        <a class="p-1 hover:text-primary hover:underline" href="https://twitter.com/ivandokov" target="_blank" rel="me">Twitter</a>
                         <a class="p-1 hover:underline" :href="emailHref">Email</a>
                         <a class="p-1 hover:underline" href="/rss.xml">RSS</a>
                     </div>
