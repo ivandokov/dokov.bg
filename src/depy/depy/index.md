@@ -6,6 +6,7 @@ excerpt: Bash based deployment tool for zero downtime website deployment and ins
 meta:
   - name: description
     content: Bash based deployment tool for zero downtime website deployment and instant rollbacks in case of emergency
+comment_link: https://twitter.com/IvanDokov/status/1168986064209555456
 ---
 
 # Depy
@@ -51,5 +52,5 @@ Depy has the following hooks:
 ## Status
 
 I've been using Depy for the past 3 years and I did some breaking changes but it is pretty stable at the moment and I have deployed to production and staging servers more than 10 projects with different needs. I have some plans to rewrite everything in Go and release binaries for Linux, Mac and maybe even Windows, but this is just an idea and it will heavily depend on my free time which I rarely have. But even if I do not rewrite it in Go it is just fine as it is right now and this rewrite idea could be only a way to scratch my itch to do something meaningful in Go and it will probably pass.
-                                  
+
 For more information please go to the [repository documentation](https://github.com/ivandokov/depy).

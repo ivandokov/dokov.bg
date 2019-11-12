@@ -19,7 +19,8 @@
             </div>
         </aside>
 
-        <aside v-if="numLikes || numComments" class="py-5">
+        <aside v-if="numLikes || commentLink" class="mt-5">
+            <div v-if="commentLink" class="mb-3">Like, retween or comment at <a :href="commentLink" target="_blank" class="text-primary hover:underline">this tweet</a>.</div>
             <template v-if="numLikes">
                 <div class="mb-1 text-gray-500">
                     {{ numLikes }} like{{ numLikes > 1 ? 's' : ''}} or retweet{{ numLikes > 1 ? 's' : ''}}
@@ -37,30 +38,28 @@
                     </a>
                 </div>
             </template>
-            <template v-if="numComments">
-                <div class="mb-1 text-gray-500">
-                    {{ numComments }} comment{{ numComments > 1 ? 's' : '' }}
-                </div>
-                <div class="text-sm mb-5"
-                     v-for="mention in comments"
-                     :key="`comment_${mention.webmention_id}`">
-                    <a :href="mention.author_url"
-                       :title="mention.author_name"
-                       target="_blank"
-                       class="inline-block align-middle w-6 rounded-full overflow-hidden">
-                        <img
-                                :src="mention.author_photo_url"
-                                :alt="mention.author_name">
-                    </a>
-                    <a :href="mention.author_url"
-                       target="_blank"
-                       class="hover:text-primary">
-                        <strong>{{ mention.author_name }}</strong>
-                    </a>
-                    on {{ mention.created_at.toDate() | date }}
-                    <p class="mt-2">{{ mention.text }}</p>
-                </div>
-            </template>
+            <div v-if="numComments" class="mb-1 text-gray-500">
+                {{ numComments }} comment{{ numComments > 1 ? 's' : '' }}
+            </div>
+            <div class="mb-5"
+                 v-for="mention in comments"
+                 :key="`comment_${mention.webmention_id}`">
+                <a :href="mention.author_url"
+                   :title="mention.author_name"
+                   target="_blank"
+                   class="inline-block align-middle w-6 rounded-full overflow-hidden">
+                    <img
+                            :src="mention.author_photo_url"
+                            :alt="mention.author_name">
+                </a>
+                <a :href="mention.author_url"
+                   target="_blank"
+                   class="hover:text-primary">
+                    <strong>{{ mention.author_name }}</strong>
+                </a>
+                on {{ mention.created_at.toDate() | date }}
+                <p class="mt-2">{{ mention.text }}</p>
+            </div>
         </aside>
     </article>
 </template>
@@ -105,8 +104,13 @@
             numLikes() {
                 return this.likesAndRetweets.length
             },
+
             numComments() {
                 return this.comments.length
+            },
+
+            commentLink() {
+                return this.$page.frontmatter.comment_link || null;
             },
         },
 
