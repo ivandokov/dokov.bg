@@ -20,7 +20,7 @@
         </aside>
 
         <aside v-if="numLikes || commentLink" class="mt-5">
-            <div v-if="commentLink" class="mb-3">Like, retween or comment at <a :href="commentLink" target="_blank" class="text-primary hover:underline">this tweet</a>.</div>
+            <div v-if="commentLink" class="mb-3">Like, retweet or comment at <a :href="commentLink" target="_blank" class="text-primary hover:underline">this tweet</a>.</div>
             <template v-if="numLikes">
                 <div class="mb-1 text-gray-500">
                     {{ numLikes }} like{{ numLikes > 1 ? 's' : ''}} or retweet{{ numLikes > 1 ? 's' : ''}}
