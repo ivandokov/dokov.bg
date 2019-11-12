@@ -6,6 +6,7 @@ excerpt: Build nginx from source with GeoIP2 module and block specific countries
 meta:
   - name: description
     content: Build nginx from source with GeoIP2 module
+comment_link: https://twitter.com/IvanDokov/status/1192054228178669568
 ---
 
 # Nginx with GeoIP2 on Ubuntu
