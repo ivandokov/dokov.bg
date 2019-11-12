@@ -25,6 +25,7 @@ jobs:
           mv src/.vuepress/dist public
           cd functions
           npm install
+          cd ..
 
       - name: Deploy
         run: |
