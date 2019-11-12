@@ -1,0 +1,38 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "src/",
+      "license",
+      "package.json",
+      "package-lock.json",
+      "readme.md",
+      "tailwind.config.js"
+    ],
+    "trailingSlash": true,
+    "redirects": [
+      {
+        "source": "/contacts/",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/:page*/index.html",
+        "destination": "/:page",
+        "type": 301
+      },
+      {
+        "source": "/:page*/index",
+        "destination": "/:page",
+        "type": 301
+      }
+    ]
+  }
+}

@@ -3,9 +3,9 @@
         <div class="container flex flex-wrap">
             <Sidebar class="w-full md:w-1/4 md:text-right"/>
             <main class="w-full md:w-3/4 md:pl-10 md:pt-24 mt-6 text-lg leading-relaxed">
-                <Index v-if="type === 'index'"></Index>
-                <Post v-else-if="type === 'post'"></Post>
-                <section v-else>
+                <Index v-if="type === 'index'" :key="$page.key"></Index>
+                <Post v-else-if="type === 'post'" :key="$page.key"></Post>
+                <section v-else :key="$page.key">
                     <Content class="content-body -mt-2"></Content>
                 </section>
             </main>

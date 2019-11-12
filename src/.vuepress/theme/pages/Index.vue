@@ -5,7 +5,7 @@
                 <router-link :to="post.path">{{ post.title }}</router-link>
             </h2>
             <div class="mb-1 text-xs text-gray-500">
-                In <router-link :to="category(post).path" class="text-primary hover:underline">{{ category(post).title }}</router-link> {{ post.frontmatter.date }}
+                In <router-link :to="category(post).path" class="text-primary hover:underline">{{ category(post).title }}</router-link> {{ post.frontmatter.date | date }}
             </div>
             <div v-html="post.frontmatter.excerpt"></div>
         </section>
