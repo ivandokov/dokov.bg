@@ -6,7 +6,8 @@ export default ({
 }) => {
     Vue.filter('date', function (value) {
         const date = value instanceof Date ? value : new Date(value);
-        const lang = navigator.language || navigator.languages[0];
+        const nav = typeof navigator === 'object' ? navigator : {language: 'en-US'};
+        const lang = nav.language || nav.languages[0];
 
         return date.toLocaleString(lang, {
             year: 'numeric',
