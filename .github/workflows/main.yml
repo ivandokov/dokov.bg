@@ -19,6 +19,9 @@ jobs:
           npm install -g firebase-tools
           npm install
           npm run build
+
+      - name: Prepare
+        run: |
           mv src/.vuepress/dist public
           cd functions
           npm install
