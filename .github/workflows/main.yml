@@ -20,6 +20,8 @@ jobs:
           npm install
           npm run build
           mv src/.vuepress/dist public
+          cd functions
+          npm install
 
       - name: Deploy
         run: |
