@@ -15,7 +15,7 @@ I love writing code, playing with Linux servers and trying the newest technologi
 My passion to web development made my favourite hobby a full time job. I've been a team leader in several companies and now I lead my own web development company called
 
 ::: center-50
-<a href="http://jetspark.io" target="_blank">![JetSpark](./jetspark.svg "JetSpark")</a>
+<a href="https://jetspark.io/?utm_source=dokov.bg&utm_medium=about" target="_blank">![JetSpark](./jetspark.svg "JetSpark")</a>
 :::
 
 ---
@@ -44,7 +44,7 @@ I graduated as Geodesy Engineer with Master's Degree from [Univercity of Archite
 ## Employment
 
 I used to work for companies such as [Shtrak](http://shtrak.bg/), [Cloud Cart](http://cloudcart.com/), [DtailStudio](http://www.dtailstudio.com/) and others.  
-Now I work for myself at [JetSpark](http://jetspark.io).
+Now I work for myself at [JetSpark](https://jetspark.io/?utm_source=dokov.bg&utm_medium=about).
 
 ## Hobbies
 

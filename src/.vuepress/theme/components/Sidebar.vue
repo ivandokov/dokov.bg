@@ -48,7 +48,8 @@
                 <SearchBox/>
             </aside>
             <footer class="mb-5 pt-6 md:pr-10 md:border-r border-gray-100 text-xs text-gray-300 text-center md:text-right">
-                &copy; 2006 - {{ year }} Ivan Dokov
+                &copy; 2006 - {{ year }} Ivan Dokov<br>
+                Founder of <a href="https://jetspark.io/?utm_source=dokov.bg&utm_medium=sidebar" class="text-gray-400 hover:text-primary">JetSpark</a>
             </footer>
         </div>
     </section>
