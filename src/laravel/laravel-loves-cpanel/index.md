@@ -6,6 +6,7 @@ excerpt: How to host a Laravel application on a shared hosting with cPanel. A fa
 meta:
   - name: description
     content: How to host a Laravel application on a shared hosting with cPanel. A fairytale for cronjobs.
+comment_link: https://twitter.com/IvanDokov/status/1204011106236354561
 ---
 
 # Laravel loves cPanel, kinda
