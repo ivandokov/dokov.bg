@@ -1,7 +1,7 @@
 ---
 type: post
 title: Laravel loves cPanel, kinda
-date: December 6, 2019
+date: December 9, 2019
 excerpt: How to host a Laravel application on a shared hosting with cPanel. A fairytale for cronjobs.
 meta:
   - name: description
