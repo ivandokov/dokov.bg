@@ -6,6 +6,7 @@ excerpt: How to fix wrong shutdown sequence of Supervisor, Laravel Horizon and R
 meta:
   - name: description
     content: How to fix wrong shutdown sequence of Supervisor, Laravel Horizon and Redis on Ubuntu Server
+comment_link: https://twitter.com/IvanDokov/status/1222091637972766720
 ---
 
 # Errors flood when restarting Ubuntu with Laravel Horizon
