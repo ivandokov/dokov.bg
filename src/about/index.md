@@ -8,7 +8,7 @@ type: page
 I am expert in a lot of things related to the World Wide Web.  
 With my team we know how to start from scratch and deliver success to our clients.
 
-![Ivan Dokov](./IvanDokov.png "Ivan Dokov")
+![Ivan Dokov](./IvanDokov.jpg "Ivan Dokov")
 :::
 
 I love writing code, playing with Linux servers and trying the newest technologies.<br>
