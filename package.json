@@ -5,15 +5,14 @@
     "build": "NODE_ENV=production vuepress build src"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^1.3.0",
-    "@vuepress/plugin-google-analytics": "^1.2.0",
-    "autoprefixer": "^9.7.1",
-    "firebase": "^7.3.0",
+    "@vuepress/plugin-google-analytics": "^1.5.4",
+    "autoprefixer": "^9.8.6",
+    "firebase": "^7.19.1",
     "postcss-import": "^12.0.1",
-    "postcss-nested": "^4.2.0",
-    "tailwindcss": "^1.1.3",
-    "vuepress": "^1.2.0",
-    "vuepress-plugin-container": "^2.1.0",
+    "postcss-nested": "^4.2.3",
+    "tailwindcss": "^1.7.6",
+    "vuepress": "^1.5.4",
+    "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-rss": "^2.0.0"
   }
 }

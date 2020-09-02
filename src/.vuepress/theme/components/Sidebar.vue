@@ -24,26 +24,26 @@
                     </div>
                 </nav>
 
-                <nav class="mb-5 font-sm text-center md:text-right">
-                    <div class="inline md:block">
-                        <router-link
-                                class="p-2 md:p-0 whitespace-no-wrap"
-                                :class="{'text-primary': $page.path === '/'}"
-                                :to="'/'">
-                            <span class="hover:text-primary hover:underline">All posts</span>
-                            <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-gray-100 text-gray-500 text-xs">{{ allPostsCount }}</span>
-                        </router-link>
-                    </div>
-                    <div class="inline md:block" v-for="category in categories" :key="category.page.path">
-                        <router-link
-                                class="p-2 md:p-0 whitespace-no-wrap"
-                                :class="{'text-primary': isActive(category.page.path)}"
-                                :to="category.page.path">
-                            <span class="hover:text-primary hover:underline">{{ category.page.title }}</span>
-                            <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-gray-100 text-gray-500 text-xs">{{ category.pages.length }}</span>
-                        </router-link>
-                    </div>
-                </nav>
+<!--                <nav class="mb-5 font-sm text-center md:text-right">-->
+<!--                    <div class="inline md:block">-->
+<!--                        <router-link-->
+<!--                                class="p-2 md:p-0 whitespace-no-wrap"-->
+<!--                                :class="{'text-primary': $page.path === '/'}"-->
+<!--                                :to="'/'">-->
+<!--                            <span class="hover:text-primary hover:underline">All posts</span>-->
+<!--                            <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-gray-100 text-gray-500 text-xs">{{ allPostsCount }}</span>-->
+<!--                        </router-link>-->
+<!--                    </div>-->
+<!--                    <div class="inline md:block" v-for="category in categories" :key="category.page.path">-->
+<!--                        <router-link-->
+<!--                                class="p-2 md:p-0 whitespace-no-wrap"-->
+<!--                                :class="{'text-primary': isActive(category.page.path)}"-->
+<!--                                :to="category.page.path">-->
+<!--                            <span class="hover:text-primary hover:underline">{{ category.page.title }}</span>-->
+<!--                            <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-gray-100 text-gray-500 text-xs">{{ category.pages.length }}</span>-->
+<!--                        </router-link>-->
+<!--                    </div>-->
+<!--                </nav>-->
 
                 <SearchBox/>
             </aside>

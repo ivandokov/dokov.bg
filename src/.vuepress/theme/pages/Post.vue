@@ -3,7 +3,7 @@
         <Content class="content-body -mt-2"/>
 
         <div class="w-full my-8 text-xs text-gray-500">
-            In <router-link :to="category.path" class="text-primary hover:underline">{{ category.title }}</router-link> {{ $page.frontmatter.date | date }}
+            {{ $page.frontmatter.date | date }}
         </div>
 
         <aside class="flex flex-wrap leading-tight border border-l-0 border-r-0 border-gray-300 py-6" v-if="prev || next">

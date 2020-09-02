@@ -2,7 +2,7 @@
     <div class="px-3 md:px-0 font-sans text-secondary">
         <div class="container flex flex-wrap">
             <Sidebar class="w-full md:w-1/4 md:text-right"/>
-            <main class="w-full md:w-3/4 md:pl-10 md:pt-24 pb-12 mt-6 text-lg leading-relaxed">
+            <main class="w-full md:w-3/4 md:pl-10 md:pt-24 pb-12 mt-6 text-xl leading-relaxed">
                 <Index v-if="type === 'index'" :key="$page.key"></Index>
                 <Post v-else-if="type === 'post'" :key="$page.key"></Post>
                 <section v-else :key="$page.key">

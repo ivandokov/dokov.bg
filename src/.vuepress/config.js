@@ -14,28 +14,9 @@ module.exports = {
     postcss: {
         plugins: [
             require('postcss-import'),
-            require('tailwindcss'),
             require('postcss-nested'),
+            require('tailwindcss'),
             ...production ? [require('autoprefixer')] : [],
-            ...production ? [require('@fullhuman/postcss-purgecss')({
-                content: [
-                    './src/.vuepress/theme/**/*.vue',
-                    'node_modules/prismjs/themes/prism-tomorrow.css'
-                ],
-                whitelist: ['html', 'body'],
-                whitelistPatterns: [/^language-/, /^pre/, /^code/, /^token/],
-                whitelistPatternsChildren: [/content-body/],
-                extractors: [
-                    {
-                        extractor: class {
-                            static extract(content) {
-                                return content.match(/[A-Za-z0-9-_:\/]+/g) || []
-                            }
-                        },
-                        extensions: ['html', 'vue']
-                    }
-                ]
-            })] : [],
         ]
     },
     plugins: [
