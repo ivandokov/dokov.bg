@@ -13,8 +13,9 @@ comment_link: https://twitter.com/IvanDokov/status/1301258417449979905
 
 *This post is kind of a reference note in case I forget about the code since it is missing from the official Laravel docs and I had to dig deep to find it.*
 
-It's quite common to have some kind of protected pages which can be accessed only at some specific circumstances, for example after you subscribe and pay a monthly fee or if your user account is of a certain type, you get the point.
-Usually you will want to verify the condition in which the user will be able to access the specific page. Either in a middleware or a controller or anywhere you like you will want the user to be brought back to the page once the verification is done. Laravel provides a specific type of redirect for such cases - **intended redirect**.
+It's quite common to have some kind of protected pages which can be accessed only at some specific circumstances. For example after you subscribe and pay a monthly fee or if your user account is of a certain type. You get the point.  
+
+Usually you will want to verify the condition in which the user will be able to access the specific page. Either in a middleware or a controller or anywhere you like. You will want the user to be brought back to the page once the verification is done. Laravel provides a specific type of redirect for such cases - **intended redirect**.
 
 Before you redirect the user to verify its account you can set an intended url where the user should be returned after the verification and this is done with the following code:
 
@@ -35,3 +36,5 @@ This redirect will look for a specific session property that was set previously 
 ```php
 return redirect()->intended('/default-page');
 ```
+
+Laravel's authentication is using this type of redirect to bring you back if you visited a page protected by the `auth` guard and you were not logged in.
