@@ -6,6 +6,7 @@ excerpt: How to use Laravel's Intended Redirect
 meta:
   - name: description
     content: How to use Laravel's Intended Redirect
+comment_link: https://twitter.com/IvanDokov/status/1301258417449979905
 ---
 
 # Laravel Intended Redirects
