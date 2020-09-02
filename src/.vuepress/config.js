@@ -1,7 +1,7 @@
 const production = process.env.NODE_ENV === 'production';
 
 module.exports = {
-    title: 'Ivan Dokov - Web Expert',
+    title: 'Ivan Dokov - Software architect and strategist',
     description: 'Blog for web related stuff.',
     head: [
         ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com/', crossorigin: 'anonymous' }],
