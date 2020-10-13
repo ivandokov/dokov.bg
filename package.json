@@ -14,5 +14,9 @@
     "vuepress": "^1.6.0",
     "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-rss": "^2.0.0"
+  },
+  "devDependencies": {
+    "kind-of": ">=6.0.3",
+    "node-forge": ">=0.10.0"
   }
 }
