@@ -6,6 +6,7 @@ excerpt: Format PHP dates with ease. You don't have to Google the format string 
 meta:
   - name: description
     content: Format PHP dates with ease. You don't have to Google the format string each time. Use plain English to set the format, almost as you pronounce it.
+comment_link: https://twitter.com/IvanDokov/status/1315957237484007426
 ---
 
 # FluentDate PHP Class
