@@ -2,10 +2,10 @@
 type: post
 title: Laravel Intended Redirects
 date: September 2, 2020
-excerpt: How to use Laravel's Intended Redirect
+excerpt: How and when to use Laravel's hidden gem - Intended Redirect
 meta:
   - name: description
-    content: How to use Laravel's Intended Redirect
+    content: How and when to use Laravel's hidden gem - Intended Redirect
 comment_link: https://twitter.com/IvanDokov/status/1301258417449979905
 ---
 
