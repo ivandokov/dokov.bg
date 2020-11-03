@@ -37,7 +37,7 @@ Or manually create the symlink like this. (*Change the path to the public direct
 cd /home/website/public && ln -s ../storage/app/public storage >/dev/null 2>&1
 ```
 
-Make sure the cronjob runs every minute so you don't have to wait for exact time and then delate it once the symlink is created.
+Make sure the cronjob runs every minute so you don't have to wait for exact time and then delete it once the symlink is created.
 
 ## The web root - public and public_html directories
 
@@ -49,7 +49,7 @@ We can use the same method as the storage directory. Use the following command f
 cd /home/website && rm -rf public_html; ln -s public public_html >/dev/null 2>&1
 ```
 
-Make sure the cronjob runs every minute so you don't have to wait for exact time and then delate it once the symlink is created.
+Make sure the cronjob runs every minute so you don't have to wait for exact time and then delete it once the symlink is created.
 
 **WARNING** This may not work for all cPanel servers! I had a server which got corrupted with this method and I had to ask the support to restore the web root directory to `public_html`. They told me there is no way to change this directory even in Apache configs even though I know there is. I just gave up trying to change their mind.
 
