@@ -69,7 +69,7 @@ Here things get tricky. We have to tackle two problems:
 
 ### Queue storage
 
-The first one is easy. Since most of cPanel based hostings do not offer Redis and may not want to install it for use we can use external services such as Amazon SQS but that's not really common since we are forced to use cPanel - who would allow us to use cool external services 🤪? The more natural option for cPanel is to use MySQL for jobs queue. You should run locally 
+The first one is easy. Since most of cPanel based hostings do not offer Redis and may not want to install it for us we can use external services such as Amazon SQS but that's not really common since we are forced to use cPanel - who would allow us to use cool external services 🤪? The more natural option for cPanel is to use MySQL for jobs queue. You should run locally 
 ```bash
 php artisan queue:table
 php artisan migrate
