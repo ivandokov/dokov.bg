@@ -111,7 +111,7 @@
         },
 
         mounted() {
-            const url = `https://dokov.bg${this.$page.regularPath}`;
+            const url = `https://dokov.bg${this.$page.path}`;
             db.collection('webmentions')
                 .where('post_url', '==', url)
                 .orderBy('created_at', 'asc')
