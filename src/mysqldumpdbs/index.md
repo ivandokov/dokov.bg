@@ -38,10 +38,10 @@ I thought you may not want to clone the repository locally and will want to run 
 
 ### wget
 ```bash
-bash <(wget -qO- http://git.io/vvyfd)
+bash <(wget -qO- https://raw.githubusercontent.com/ivandokov/mysqldumpdbs/master/mysqldumpdbs.bash)
 ```
 
 ### curl
 ```bash
-bash <(curl -sL http://git.io/vvyfd)
+bash <(curl -sL https://raw.githubusercontent.com/ivandokov/mysqldumpdbs/master/mysqldumpdbs.bash)
 ```
