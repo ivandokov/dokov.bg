@@ -43,7 +43,7 @@
                 "type": 301
             },
             {
-                "source": "/depy/depy",
+                "source": "/depy/depy*",
                 "destination": "/depy",
                 "type": 301
             },
@@ -53,7 +53,7 @@
                 "type": 301
             },
             {
-                "source": "/bootstrap/bootstrap-font-sizes",
+                "source": "/bootstrap/bootstrap-font-sizes*",
                 "destination": "/bootstrap-font-sizes",
                 "type": 301
             },
@@ -63,7 +63,7 @@
                 "type": 301
             },
             {
-                "source": "/servers/nginx-geoip2-ubuntu",
+                "source": "/servers/nginx-geoip2-ubuntu*",
                 "destination": "/nginx-geoip2",
                 "type": 301
             },
