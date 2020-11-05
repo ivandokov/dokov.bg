@@ -5,7 +5,7 @@ module.exports = {
     description: 'Blog for web related stuff.',
     head: [
         ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com/', crossorigin: 'anonymous' }],
-        ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap' }],
+        ['link', { rel: 'preload', href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap', as: 'style', onload: "this.onload=null;this.rel='stylesheet'" }],
         ['link', { rel: 'me', href: 'https://twitter.com/ivandokov' }],
         ['link', { rel: 'webmention', href: 'https://webmention.io/dokov.bg/webmention' }],
         ['link', { rel: 'pingback', href: 'https://webmention.io/dokov.bg/xmlrpc' }],
