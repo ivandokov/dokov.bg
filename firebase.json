@@ -78,6 +78,11 @@
                 "type": 301
             },
             {
+                "source": "/tools/:uri*/",
+                "destination": "/:uri",
+                "type": 301
+            },
+            {
                 "source": "/:page*/index.html",
                 "destination": "/:page",
                 "type": 301
