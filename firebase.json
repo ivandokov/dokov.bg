@@ -1,71 +1,92 @@
 {
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
-  },
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/node_modules/**"
-    ],
-    "trailingSlash": true,
-    "redirects": [
-      {
-        "source": "/contacts/",
-        "destination": "/",
-        "type": 301
-      },
-      {
-        "source": "/depy",
-        "destination": "/",
-        "type": 301
-      },
-      {
-        "source": "/depy/depy",
-        "destination": "/depy",
-        "type": 301
-      },
-      {
-        "source": "/bootstrap",
-        "destination": "/",
-        "type": 301
-      },
-      {
-        "source": "/bootstrap/bootstrap-font-sizes",
-        "destination": "/bootstrap-font-sizes",
-        "type": 301
-      },
-      {
-        "source": "/servers",
-        "destination": "/",
-        "type": 301
-      },
-      {
-        "source": "/servers/nginx-geoip2-ubuntu",
-        "destination": "/nginx-geoip2",
-        "type": 301
-      },
-      {
-        "source": "/laravel/:uri*",
-        "destination": "/:uri",
-        "type": 301
-      },
-      {
-        "source": "/tools/:uri*",
-        "destination": "/:uri",
-        "type": 301
-      },
-      {
-        "source": "/:page*/index.html",
-        "destination": "/:page",
-        "type": 301
-      },
-      {
-        "source": "/:page*/index",
-        "destination": "/:page",
-        "type": 301
-      }
-    ]
-  }
+    "firestore": {
+        "rules": "firestore.rules",
+        "indexes": "firestore.indexes.json"
+    },
+    "hosting": {
+        "public": "public",
+        "headers": [
+            {
+                "source": "/**",
+                "headers": [
+                    {
+                        "key": "Cache-Control",
+                        "value": "no-cache, no-store, must-revalidate"
+                    }
+                ]
+            },
+            {
+                "source": "**/*.@(jpg|jpeg|gif|png|svg|webp|js|css|eot|otf|ttf|ttc|woff|woff2)",
+                "headers": [
+                    {
+                        "key": "Cache-Control",
+                        "value": "max-age=86400"
+                    }
+                ]
+            }
+        ],
+        "ignore": [
+            "firebase.json",
+            "**/node_modules/**"
+        ],
+        "cleanUrls": true,
+        "trailingSlash": false,
+        "redirects": [
+            {
+                "source": "/contacts/",
+                "destination": "/",
+                "type": 301
+            },
+            {
+                "source": "/depy",
+                "destination": "/",
+                "type": 301
+            },
+            {
+                "source": "/depy/depy",
+                "destination": "/depy",
+                "type": 301
+            },
+            {
+                "source": "/bootstrap",
+                "destination": "/",
+                "type": 301
+            },
+            {
+                "source": "/bootstrap/bootstrap-font-sizes",
+                "destination": "/bootstrap-font-sizes",
+                "type": 301
+            },
+            {
+                "source": "/servers",
+                "destination": "/",
+                "type": 301
+            },
+            {
+                "source": "/servers/nginx-geoip2-ubuntu",
+                "destination": "/nginx-geoip2",
+                "type": 301
+            },
+            {
+                "source": "/laravel/:uri*",
+                "destination": "/:uri",
+                "type": 301
+            },
+            {
+                "source": "/tools/:uri*",
+                "destination": "/:uri",
+                "type": 301
+            },
+            {
+                "source": "/:page*/index.html",
+                "destination": "/:page",
+                "type": 301
+            },
+            {
+                "source": "/:page*/index",
+                "destination": "/:page",
+                "type": 301
+            }
+        ]
+    }
 }
