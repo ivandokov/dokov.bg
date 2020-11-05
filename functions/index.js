@@ -23,13 +23,16 @@ exports.webmentions = functions.region('europe-west1').https.onRequest((request,
                 return response.send('Already added');
             }
 
+            let postUrl = request.body.target.split('#')[0]
+            postUrl = postUrl.endsWith('/') ? postUrl.slice(0, -1) : postUrl
+
             return admin.firestore().collection('webmentions').add({
                 type: request.body.post['wm-property'],
                 webmention_id: request.body.post['wm-id'] || '',
                 author_name: request.body.post.author.name,
                 author_photo_url: request.body.post.author.photo,
                 author_url: request.body.post.author.url,
-                post_url: request.body.target,
+                post_url: postUrl,
                 interaction_url: request.body.source,
                 text: request.body.post.content
                     ? request.body.post.content.text
