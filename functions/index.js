@@ -26,6 +26,10 @@ exports.webmentions = functions.region('europe-west1').https.onRequest((request,
             let postUrl = request.body.target.split('#')[0]
             postUrl = postUrl.endsWith('/') ? postUrl.slice(0, -1) : postUrl
 
+            if (postUrl.split('/').length <= 4) { // Do not record mentions to the domain only (not post)
+                return response.send('Webmention skipped');
+            }
+
             return admin.firestore().collection('webmentions').add({
                 type: request.body.post['wm-property'],
                 webmention_id: request.body.post['wm-id'] || '',
@@ -40,7 +44,7 @@ exports.webmentions = functions.region('europe-west1').https.onRequest((request,
                 created_at: request.body.post.published
                     ? new Date(request.body.post.published)
                     : new Date(),
-            }).then(result => {
+            }).then(_ => {
                 return response.send('Webmention added');
             }).catch(error => {
                 return response.status(500).send(error);
