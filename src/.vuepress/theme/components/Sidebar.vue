@@ -13,8 +13,8 @@
                                      :class="{'text-primary': isViewingBlog}"
                                      :to="'/'">Blog</router-link>
                         <router-link class="p-2 hover:text-primary hover:underline"
-                                     :class="{'text-primary': $page.path === '/about/'}"
-                                     :to="'/about/'">About</router-link>
+                                     :class="{'text-primary': $page.path === '/about'}"
+                                     :to="'/about'">About</router-link>
                     </div>
                     <div class="inline md:block ml-2 md:ml-0 text-xs text-gray-500">
                         <a class="p-1 hover:text-primary hover:underline" href="https://github.com/ivandokov" target="_blank" rel="me">GitHub</a>
@@ -23,27 +23,6 @@
                         <a class="p-1 hover:underline" href="/rss.xml">RSS</a>
                     </div>
                 </nav>
-
-<!--                <nav class="mb-5 font-sm text-center md:text-right">-->
-<!--                    <div class="inline md:block">-->
-<!--                        <router-link-->
-<!--                                class="p-2 md:p-0 whitespace-no-wrap"-->
-<!--                                :class="{'text-primary': $page.path === '/'}"-->
-<!--                                :to="'/'">-->
-<!--                            <span class="hover:text-primary hover:underline">All posts</span>-->
-<!--                            <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-gray-100 text-gray-500 text-xs">{{ allPostsCount }}</span>-->
-<!--                        </router-link>-->
-<!--                    </div>-->
-<!--                    <div class="inline md:block" v-for="category in categories" :key="category.page.path">-->
-<!--                        <router-link-->
-<!--                                class="p-2 md:p-0 whitespace-no-wrap"-->
-<!--                                :class="{'text-primary': isActive(category.page.path)}"-->
-<!--                                :to="category.page.path">-->
-<!--                            <span class="hover:text-primary hover:underline">{{ category.page.title }}</span>-->
-<!--                            <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-gray-100 text-gray-500 text-xs">{{ category.pages.length }}</span>-->
-<!--                        </router-link>-->
-<!--                    </div>-->
-<!--                </nav>-->
 
                 <SearchBox/>
             </aside>
@@ -57,7 +36,6 @@
 
 <script>
     import SearchBox from './SearchBox'
-    import { Posts, ByCategories } from '../posts'
     import { email } from '../util';
 
     export default {
@@ -76,15 +54,6 @@
         },
 
         computed: {
-            allPostsCount() {
-                return Posts(this.$site.pages).length;
-            },
-
-            categories() {
-                return Object.values(ByCategories(this.$site.pages))
-                        .filter(page => page.page.frontmatter.type === 'index');
-            },
-
             isViewingBlog() {
                 return ['index', 'post'].indexOf(this.$page.frontmatter.type) >= 0;
             },
@@ -93,11 +62,5 @@
                 return (new Date()).getFullYear();
             }
         },
-
-        methods: {
-            isActive(path) {
-                return this.$page.path.match(new RegExp(`^${path}.*`));
-            }
-        }
     }
 </script>

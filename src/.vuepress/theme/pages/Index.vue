@@ -13,7 +13,7 @@
 </template>
 
 <script>
-    import { GetCategory, SortedPosts } from '../posts'
+    import { SortedPosts } from '../posts'
 
     export default {
         data() {
@@ -35,11 +35,5 @@
                 });
             },
         },
-
-        methods: {
-            category(post) {
-                return GetCategory(post);
-            }
-        }
     }
 </script>

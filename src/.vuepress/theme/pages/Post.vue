@@ -65,16 +65,12 @@
 </template>
 
 <script>
-    import { FindByPath, FindByOffset, GetCategory } from '../posts';
+    import { FindByPath, FindByOffset } from '../posts';
     import { db } from '../db';
 
     export default {
         data: () => ({ likesAndRetweets: [], comments: [] }),
         computed: {
-            category() {
-                return GetCategory(this.$page);
-            },
-
             prev() {
                 const prev = this.$page.frontmatter.prev;
                 if (prev === false) {

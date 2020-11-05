@@ -20,6 +20,11 @@ module.exports = {
         ]
     },
     plugins: [
+        ['vuepress-plugin-clean-urls', {
+            normalSuffix: '',
+            indexSuffix: '',
+            notFoundPath: '/404.html',
+        }],
         ['vuepress-plugin-rss', {
             base_url: '/',
             site_url: 'http://dokov.bg',

@@ -1,3 +1,4 @@
 ---
 type: index
+permalink: /
 ---
