@@ -6,6 +6,7 @@ excerpt: Dump all MySQL databases from a server in separate files.
 meta:
   - name: description
     content: Dump all MySQL databases from a server in separate files
+comment_link: https://twitter.com/IvanDokov/status/1324331582082134018
 ---
 
 # MySQL Dump Databases
