@@ -78,7 +78,7 @@
                 "type": 301
             },
             {
-                "source": "/tools/:uri*/",
+                "source": "/:uri*/",
                 "destination": "/:uri",
                 "type": 301
             },
