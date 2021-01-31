@@ -1,17 +1,19 @@
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
+const functions = require('firebase-functions')
+const admin = require('firebase-admin')
 
-admin.initializeApp();
+admin.initializeApp()
 
-const secret = functions.config().webmention.secret;
+const secret = functions.config().webmention.secret
 
 exports.webmentions = functions.region('europe-west1').https.onRequest((request, response) => {
     if (request.method !== 'POST') {
-        return response.status(500).send('Not Allowed');
+        console.log('Not allowed')
+        return response.status(500).send('Not Allowed')
     }
 
     if (secret !== request.body.secret) {
-        return response.status(400).send("Invalid secret");
+        console.log('Invalid secret')
+        return response.status(400).send("Invalid secret")
     }
 
     return admin.firestore()
@@ -20,14 +22,17 @@ exports.webmentions = functions.region('europe-west1').https.onRequest((request,
         .get()
         .then(querySnapshot => {
             if (querySnapshot.docs.length > 0) {
-                return response.send('Already added');
+                console.log('Already added')
+                return response.send('Already added')
             }
 
             let postUrl = request.body.target.split('#')[0]
             postUrl = postUrl.endsWith('/') ? postUrl.slice(0, -1) : postUrl
 
-            if (postUrl.split('/').length <= 4) { // Do not record mentions to the domain only (not post)
-                return response.send('Webmention skipped');
+            // Skip mentions which are linking to the domain only and not to a post
+            if (postUrl.split('/').length <= 4) {
+                console.log('Webmention skipped')
+                return response.send('Webmention skipped')
             }
 
             return admin.firestore().collection('webmentions').add({
@@ -45,9 +50,11 @@ exports.webmentions = functions.region('europe-west1').https.onRequest((request,
                     ? new Date(request.body.post.published)
                     : new Date(),
             }).then(_ => {
-                return response.send('Webmention added');
+                console.log('Webmention added')
+                return response.send('Webmention added')
             }).catch(error => {
-                return response.status(500).send(error);
-            });
-        });
-});
+                console.log('Error', error)
+                return response.status(500).send(error)
+            })
+        })
+})
