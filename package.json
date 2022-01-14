@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "kind-of": ">=6.0.3",
-    "node-forge": ">=0.10.0",
+    "node-forge": ">=1.0.0",
     "vuepress-plugin-clean-urls": "^1.1.2"
   }
 }
