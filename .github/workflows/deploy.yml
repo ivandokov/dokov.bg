@@ -27,8 +27,12 @@ jobs:
           npm install
           cd ..
 
+      - name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v1'
+        with:
+          credentials_json: '${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}'
+
       - name: Deploy
         run: |
-          echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" > ~/firebase.json
-          export GOOGLE_APPLICATION_CREDENTIALS=~/firebase.json firebase deploy
+          firebase deploy
 
