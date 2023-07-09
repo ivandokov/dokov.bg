@@ -15,8 +15,9 @@ when I developed my first website for a client.
 :::
 
 I love writing code, playing with Linux servers and trying new technologies.<br>
-My passion to web development made my favourite hobby a full time job. I was a team leader and coach in multiple
-companies, and now I work as a web consultant and developer at my own company
+My passion to web development made my favourite hobby a full time job. Over the years, I have gained valuable experience
+as a team leader and coach in various companies. Currently, I am proud to work as a web consultant and developer at my
+own company
 called <a href="https://jetspark.io/?utm_source=dokov.bg&utm_medium=about" target="_blank"><img src="./jetspark.svg" alt="JetSpark" style="display: inline-block; height: 16px"/></a>.
 
 ## Tech Experience
