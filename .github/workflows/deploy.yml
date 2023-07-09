@@ -29,5 +29,6 @@ jobs:
 
       - name: Deploy
         run: |
-          firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+          echo ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }} > ~/firebase.json
+          export GOOGLE_APPLICATION_CREDENTIALS=~/firebase.json firebase deploy
 
