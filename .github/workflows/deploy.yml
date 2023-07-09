@@ -29,6 +29,6 @@ jobs:
 
       - name: Deploy
         run: |
-          echo ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }} > ~/firebase.json
+          echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" > ~/firebase.json
           export GOOGLE_APPLICATION_CREDENTIALS=~/firebase.json firebase deploy
 
