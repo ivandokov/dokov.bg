@@ -5,67 +5,106 @@ type: page
 ::: center
 <h1>I am Ivan Dokov</h1>
 
-I am expert in a lot of things related to the World Wide Web.  
-With my team we know how to start from scratch and deliver success to our clients.
+My web related experience dates back to 2006  
+when I developed my first website for a client.
 
+:::
+
+::: center-50
 ![Ivan Dokov](./IvanDokov.jpg "Ivan Dokov")
 :::
 
-I love writing code, playing with Linux servers and trying the newest technologies.<br>
-My passion to web development made my favourite hobby a full time job. I've been a team leader in several companies and now I lead my own web development company called
-
-::: center-50
-<a href="https://jetspark.io/?utm_source=dokov.bg&utm_medium=about" target="_blank">![JetSpark](./jetspark.svg "JetSpark")</a>
-:::
-
----
+I love writing code, playing with Linux servers and trying new technologies.<br>
+My passion to web development made my favourite hobby a full time job. I was a team leader and coach in multiple
+companies, and now I work as a web consultant and developer at my own company
+called <a href="https://jetspark.io/?utm_source=dokov.bg&utm_medium=about" target="_blank"><img src="./jetspark.svg" alt="JetSpark" style="display: inline-block; height: 16px"/></a>.
 
 ## Tech Experience
 
-Through the years I've tried many technologies and I learned a lot of useful (and not that much) things. if I have to make a list of all the things I use(d) or interacted with it will look like this. The order is not important.
+Through the years I've tried many technologies and I learned a lot of things. I enjoy equally working on frontend as I
+do on backend. If I have to
+make a list of all the things I use or interacted with it will look like this.
 
-* HTML, CSS, SCSS, LESS, CSS/SVG Animations 
-* JavaScript, TypeScript, Dart
-* PHP, Laravel, Slim, CodeIgniter, WordPress
-* Node.js, Express, socket.io
-* Angular, Vue, React, jQuery, Leaflet
-* [Rockety](https://github.com/ivandokov/rockety), Laravel Mix, Webpack, Babel, Gulp, Grunt
-* MySQL, Redis, [Depy](https://github.com/ivandokov/depy), Python
-* DigitalOcean, Amazon EC2, Amazon S3, PHP-FPM, Nginx, Apache
+### Current tech stack
+
+* PHP, Laravel, Laravel Livewire, AlpineJS, TailwindCSS
+* MySQL, Redis, Nginx, DigitalOcean
+
+### I also have experience with the following
+
+* Vue, Angular, React, Vuepress, Leaflet
+* Docker, Ansible, [Depy](https://github.com/ivandokov/depy)
+* Slim, CodeIgniter, WordPress
+* Shopify themes development
+* Node.js, Express, socket.io, Python
+* Webpack, Laravel Mix, Babel, Gulp, Grunt
+* Amazon EC2, Amazon S3, Apache
 * Stripe, Braintree, PayPal, Borica payments
-* Bash, Git, SVN, Vagrant
-* Photoshop, Illustrator, Lightroom, Sketch, Zeplin, SketchUp, AutoCAD
-* ... and I probably forgot a lot more.
-
-## Education
-
-I graduated as Geodesy Engineer with Master's Degree from [Univercity of Architecture Civil Engineering and Geodesy](https://www.uacg.bg/) - Sofia, Bulgaria.
+* Bash, Dart, Go
+* Git, SVN, Vagrant
+* Photoshop, Illustrator, Lightroom, Figma, Sketch, Zeplin, SketchUp, AutoCAD
 
 ## Employment
 
-I used to work for companies such as [Shtrak](http://shtrak.bg/), [Cloud Cart](http://cloudcart.com/), [DtailStudio](http://www.dtailstudio.com/) and others.  
+I used to work for companies such
+as [DtailStudio](http://www.dtailstudio.com/), [Cloud Cart](http://cloudcart.com/), [Shtrak](http://shtrak.bg/) and
+others. Everywhere I worked I influenced a positive change in the dev teams by improving the processes either as a team
+lead or helping my colleagues developers to use better practices I've learned from my experience.  
 Now I work for myself at [JetSpark](https://jetspark.io/?utm_source=dokov.bg&utm_medium=about).
+
+Some of my clients:
+
+* [CCIRC](http://immigration.ca/) - The largest immigration company in Canada. I've developed multiple internal
+  systems (currently 3)
+  for them. Basically my software runs most of their business.
+* [MobilAds](https://www.mobilads.co/) - Advertising platform. Drivers earn money by placing ads on their cars and
+  companies get amazing ROI by displaying high impact ads in large cities. I've developed the main website and the blog
+  system.
+* [AlphaFoods](https://alphafoods.de/) - Healthy food supplements in Germany. I've developed the Shopify theme.
+* [Discology](https://discology.io/) - A silent disco platform. For people to create space for themselves and others to
+  meet and connect. I've developed the whole web app.
+* [BloomFile](https://bloomfile.com/) - On-demand Real
+  Estate Assistance. I've developed the marketing site, blog and the web app.
+* [Window Well Experts](https://windowwellexperts.com/) - One of the largest manufacturers of window wells in the USA.
+  I've developed their main software - the quotes collection software which is due to v2 upgrade with payments
+  processing capabilities.
+* [RockDiving](https://rockdiving.bg/en) - Diving center in Bulgaria
+* [Activ](https://activ.bg/) - Largest auditing and accounting company in Bulgaria. I've developed the website and
+  administrative panel with built-from-scratch WYSIWYG page builder.
+* [LR Health & Beauty](https://www.lrworld.com/) - Health & Beauty products. I've developed an event announcement page
+  with live chat and video streaming.
+
+## Education
+
+I graduated as Geodesy Engineer with Master's Degree
+from [Univercity of Architecture Civil Engineering and Geodesy](https://www.uacg.bg/) - Sofia, Bulgaria.
 
 ## Hobbies
 
-I am passionate about mutiple activities in my life but the top place is taken by my spearfishing hobby.
+I am passionate about multiple activities in my life but the top place is taken by my spearfishing hobby.
 
 ### Spearfishing :fish:
 
-I may have to present my spearfishing activities not only as hobby as I am competing prefessionally since 2016 and I first held a speargun underwater when I was just 8 years old.
+I may have to present my spearfishing activities not only as hobby as I am competing professionally since 2016, and I
+first held a speargun underwater when I was just 8 years old.
 
 ### Photography :camera:
 
-I consider myself an advanced amateur in this area. You can take a look at my [portfolio](https://500px.com/ivandokov).
+I like taking photos and I think I'm a step above an amateur. Unfortunately I don't have enough time to enjoy it and
+my [portfolio](https://500px.com/ivandokov) is rather empty.
 
 ### Playing guitar :guitar:
 
-I am listening to rock and metal music basically my entire life. During my professional career I had several colleagues which are also professional guitar players and they ignited this spark by accident. At the moment I suck but I'm trying...
+I am listening to rock and metal music basically my entire life. During my professional career I had several colleagues
+which are professional guitar players, and they ignited this spark by accident. At the moment I suck, but I'm
+trying...
 
 ### Table tennis :ping_pong:
 
-I used to be pretty good player but my daily routine (or my laziness or lack of time) is stopping me from playing these days.
+I used to be pretty good player, but I hardly find any time to play anymore.
 
 ### Gaming :video_game:
 
-I have a long history with [Lineage II](https://www.lineage2.com/). This is my favourite game ever and I still have hard time breaking up with it. I started playing when I was 15 years old. Before that I was mostly playing Counter-Strike, WarCraft III and Diablo II.
+I have a long history with [Lineage II](https://www.lineage2.com/). This is my favourite game ever and I still play from
+time to time. I started playing when I was 15. Before that I was mostly playing Counter-Strike, Diablo II and some
+WarCraft III.

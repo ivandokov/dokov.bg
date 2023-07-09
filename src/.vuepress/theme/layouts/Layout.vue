@@ -1,5 +1,5 @@
 <template>
-    <div class="px-3 md:px-0 font-sans text-secondary">
+    <div :class="pathAsClassName" class="px-3 md:px-0 font-sans text-secondary">
         <div class="container flex flex-wrap">
             <Sidebar class="w-full md:w-1/4 md:text-right"/>
             <main class="w-full md:w-3/4 md:pl-10 md:pt-24 pb-12 mt-6 text-xl leading-relaxed">
@@ -14,19 +14,22 @@
 </template>
 
 <script>
-    import Sidebar from '../components/Sidebar';
-    import Index from '../pages/Index'
-    import Post from '../pages/Post'
+import Sidebar from '../components/Sidebar';
+import Index from '../pages/Index'
+import Post from '../pages/Post'
 
-    export default {
-        components: {Sidebar, Index, Post},
+export default {
+    components: {Sidebar, Index, Post},
 
-        computed: {
-            type() {
-                return this.$page.frontmatter.type;
-            }
+    computed: {
+        type() {
+            return this.$page.frontmatter.type;
+        },
+        pathAsClassName() {
+            return 'page-' + this.$page.path.substring(1).replace('/', '-')
         }
     }
+}
 </script>
 
 <style src="../styles/app.css"></style>

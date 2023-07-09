@@ -1,5 +1,6 @@
 @import "tailwindcss/base";
 @import "./content";
+@import "./print";
 
 @import "tailwindcss/components";
 @import "prismjs/themes/prism-tomorrow";

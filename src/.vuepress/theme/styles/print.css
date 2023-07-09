@@ -1,0 +1,10 @@
+@media print {
+    #sidebar, .header-anchor, a[rel~="noreferrer"] span {
+        display: none;
+    }
+
+    .page-about .content-body .center-50 img {
+        height: 150px;
+        margin: 0 auto;
+    }
+}

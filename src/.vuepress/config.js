@@ -4,12 +4,22 @@ module.exports = {
     title: 'Ivan Dokov - Software architect and strategist',
     description: 'Blog for web related stuff.',
     head: [
-        ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com/', crossorigin: 'anonymous' }],
-        ['link', { rel: 'preload', href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap', as: 'style', onload: "this.onload=null;this.rel='stylesheet'" }],
-        ['link', { rel: 'me', href: 'https://twitter.com/ivandokov' }],
-        ['link', { rel: 'webmention', href: 'https://webmention.io/dokov.bg/webmention' }],
-        ['link', { rel: 'pingback', href: 'https://webmention.io/dokov.bg/xmlrpc' }],
-        ['link', { rel: 'alternate', href: 'https://dokov.bg/rss.xml', type: 'application/atom+xml', title: 'Ivan Dokov - blog for web related stuff' }],
+        ['link', {rel: 'preconnect', href: 'https://fonts.gstatic.com/', crossorigin: 'anonymous'}],
+        ['link', {
+            rel: 'preload',
+            href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap',
+            as: 'style',
+            onload: "this.onload=null;this.rel='stylesheet'"
+        }],
+        ['link', {rel: 'me', href: 'https://twitter.com/ivandokov'}],
+        ['link', {rel: 'webmention', href: 'https://webmention.io/dokov.bg/webmention'}],
+        ['link', {rel: 'pingback', href: 'https://webmention.io/dokov.bg/xmlrpc'}],
+        ['link', {
+            rel: 'alternate',
+            href: 'https://dokov.bg/rss.xml',
+            type: 'application/atom+xml',
+            title: 'Ivan Dokov - blog for web related stuff'
+        }],
     ],
     postcss: {
         plugins: [
@@ -41,12 +51,7 @@ module.exports = {
         }],
         ['vuepress-plugin-container', {
             type: 'center-50',
-            before: '<div class="w-1/2 mx-auto">',
-            after: '</div>',
-        }],
-        ['vuepress-plugin-container', {
-            type: 'center-80',
-            before: '<div class="w-3/4 mx-auto">',
+            before: '<div class="center-50 w-1/2 mx-auto">',
             after: '</div>',
         }],
     ]
