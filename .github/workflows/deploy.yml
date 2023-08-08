@@ -23,9 +23,6 @@ jobs:
       - name: Prepare
         run: |
           mv src/.vuepress/dist public
-          cd functions
-          npm install
-          cd ..
 
       - name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v1'
