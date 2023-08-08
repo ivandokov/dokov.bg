@@ -33,7 +33,7 @@ make a list of all the things I use or interacted with it will look like this.
 
 ### I also have experience with the following
 
-* Vue, Angular, React, Vuepress, Leaflet
+* Vue, Nuxt.js, Vuepress, Leaflet
 * Docker, Ansible, [Depy](https://github.com/ivandokov/depy)
 * Slim, CodeIgniter, WordPress
 * Shopify themes development
